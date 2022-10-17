@@ -1,7 +1,3 @@
-# This is not currently being used, because Heroku private spaces do not honor
-# the `run` section:
-# https://help.heroku.com/RNIC7H18/why-my-private-spaces-app-on-container-registry-runtime-ignores-heroku-yml
-
 build:
   config:
     BUILD_ENV: production
@@ -11,7 +7,7 @@ run:
   web: /app/start-server.sh
   worker:
     command:
-      - python manage.py rqworker default
+      - python app.py rqworker default
     image: web
   worker-short:
     command:
