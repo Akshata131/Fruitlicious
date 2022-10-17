@@ -19,5 +19,5 @@ run:
     image: web
 release:
   command:
-    - python manage.py migrate --noinput
+    - python app.py migrate --noinput
   image: web
